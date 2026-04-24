@@ -24,60 +24,60 @@ export default function Index() {
   }
 
   const commands = [
-    "flux init --ai-powered",
-    "flux generate --model gpt-5 --context full",
-    "flux review --agent claude-4 --interactive",
-    "flux deploy --env production --optimize",
+    "nexus scan --sector deep-tech --alpha-signals",
+    "nexus portfolio --rebalance --ai-model quant-v4",
+    "nexus risk --analyze --monte-carlo 10000",
+    "nexus report --generate --period Q1-2025",
   ]
 
   const terminalSequences = [
     {
-      command: "flux init --ai-powered",
+      command: "nexus scan --sector deep-tech --alpha-signals",
       outputs: [
-        "Инициализация проекта FLUX CLI...",
-        "Установка зависимостей...",
-        "Настройка AI-моделей...",
-        "Проект успешно создан!",
+        "Сканирование рынка deep tech...",
+        "Анализ 1,240 компаний...",
+        "Обнаружено 18 alpha-сигналов...",
+        "Топ-5 возможностей сохранены!",
       ],
     },
     {
-      command: "flux generate --model gpt-5 --context full",
+      command: "nexus portfolio --rebalance --ai-model quant-v4",
       outputs: [
-        "Загрузка модели GPT-5...",
-        "Анализ контекста проекта...",
-        "Генерация кода...",
-        "Генерация завершена!",
+        "Загрузка quant-модели v4...",
+        "Расчёт оптимальных весов...",
+        "Ребалансировка портфеля...",
+        "Портфель обновлён!",
       ],
     },
     {
-      command: "flux review --agent claude-4 --interactive",
+      command: "nexus risk --analyze --monte-carlo 10000",
       outputs: [
-        "Запуск интерактивного ревью...",
-        "Claude-4 анализирует изменения...",
-        "Формирование рекомендаций...",
-        "Сессия ревью активна!",
+        "Запуск Monte Carlo (10,000 сценариев)...",
+        "VaR 95%: -2.3% / день...",
+        "Sharpe ratio: 2.87...",
+        "Анализ рисков завершён!",
       ],
     },
     {
-      command: "flux deploy --env production --optimize",
+      command: "nexus report --generate --period Q1-2025",
       outputs: [
-        "Сборка для production...",
-        "Оптимизация бандла...",
-        "Деплой на production...",
-        "Деплой завершён!",
+        "Формирование отчёта Q1-2025...",
+        "Доходность: +34.2% (vs S&P +9.1%)...",
+        "Генерация PDF-документа...",
+        "Отчёт для LP готов!",
       ],
     },
   ]
 
-  const heroAsciiText = `███████╗██╗     ██╗   ██╗██╗  ██╗     ██████╗██╗     ██╗
-██╔════╝██║     ██║   ██║╚██╗██╔╝    ██╔════╝██║     ██║
-█████╗  ██║     ██║   ██║ ╚███╔╝     ██║     ██║     ██║
-██╔══╝  ██║     ██║   ██║ ██╔██╗     ██║     ██║     ██║
-██║     ███████╗╚██████╔╝██╔╝ ██╗    ╚██████╗███████╗██║
-╚═╝     ╚══════╝ ╚═════╝ ╚═╝  ╚═╝     ╚═════╝╚══════╝╚═╝`
+  const heroAsciiText = `███╗   ██╗███████╗██╗  ██╗██╗   ██╗███████╗
+████╗  ██║██╔════╝╚██╗██╔╝██║   ██║██╔════╝
+██╔██╗ ██║█████╗   ╚███╔╝ ██║   ██║███████╗
+██║╚██╗██║██╔══╝   ██╔██╗ ██║   ██║╚════██║
+██║ ╚████║███████╗██╔╝ ██╗╚██████╔╝███████║
+╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝`
 
   useEffect(() => {
-    const chars = "FLUXCLI01010101ABCDEF".split("")
+    const chars = "NEXUS01011010ΑΒΓΔ∑∏∫QUANT".split("")
     const newMatrixChars = Array.from({ length: 100 }, () => chars[Math.floor(Math.random() * chars.length)])
     setMatrixChars(newMatrixChars)
 
@@ -165,8 +165,8 @@ export default function Index() {
                 <div className="w-3 h-3 bg-green-500 hover:bg-green-400 transition-colors cursor-pointer"></div>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-white font-bold text-lg">FLUX</span>
-                <span className="text-gray-400 text-sm">CLI</span>
+                <span className="text-white font-bold text-lg">NEXUS</span>
+                <span className="text-gray-400 text-sm">CAPITAL</span>
               </div>
             </div>
 
@@ -175,28 +175,28 @@ export default function Index() {
                 href="#features"
                 className="text-gray-400 hover:text-white transition-colors cursor-pointer relative group"
               >
-                <span>Возможности</span>
+                <span>Стратегия</span>
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></div>
               </a>
               <a
                 href="#models"
                 className="text-gray-400 hover:text-white transition-colors cursor-pointer relative group"
               >
-                <span>AI-модели</span>
+                <span>AI-движок</span>
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></div>
               </a>
               <a
                 href="#integrations"
                 className="text-gray-400 hover:text-white transition-colors cursor-pointer relative group"
               >
-                <span>Интеграции</span>
+                <span>Портфель</span>
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></div>
               </a>
               <Link
                 to="/docs"
                 className="text-gray-400 hover:text-white transition-colors cursor-pointer relative group"
               >
-                <span>Документация</span>
+                <span>Инвесторам</span>
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></div>
               </Link>
             </div>
@@ -205,26 +205,21 @@ export default function Index() {
           <div className="flex items-center gap-4">
             <div className="hidden sm:flex items-center gap-2 text-gray-500 text-xs">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span>v2.1.0</span>
+              <span>AUM $240M+</span>
             </div>
 
-            <div
+            <a
+              href="#docs"
               className="group relative cursor-pointer"
-              onClick={() => copyToClipboard("npm install -g flux-cli", "nav-install")}
             >
               <div className="absolute inset-0 border border-gray-600 bg-gray-900/20 transition-all duration-300 group-hover:border-white group-hover:shadow-lg group-hover:shadow-white/20"></div>
               <div className="relative border border-gray-400 bg-transparent text-white font-medium px-6 py-2 text-sm transition-all duration-300 group-hover:border-white group-hover:bg-gray-900/30 transform translate-x-0.5 translate-y-0.5 group-hover:translate-x-0 group-hover:translate-y-0">
                 <div className="flex items-center gap-2">
-                  {copiedStates["nav-install"] ? (
-                    <Check className="w-4 h-4 text-green-400" />
-                  ) : (
-                    <Copy className="w-4 h-4 text-gray-400" />
-                  )}
-                  <span className="text-gray-400">$</span>
-                  <span>Установить</span>
+                  <span className="text-gray-400">→</span>
+                  <span>Запрос доступа</span>
                 </div>
               </div>
-            </div>
+            </a>
 
             <button className="md:hidden text-gray-400 hover:text-white transition-colors">
               <div className="w-6 h-6 flex flex-col justify-center gap-1">
@@ -257,41 +252,35 @@ export default function Index() {
             </div>
 
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-              Создан, чтобы помочь вам <span className="text-gray-400 animate-pulse">деплоить</span>,
+              Инвестируем в технологии, которые <span className="text-gray-400 animate-pulse">меняют</span>
               <br />
-              прямо из{" "}
-              <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">терминала</span>.
+              будущее{" "}
+              <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">прямо сейчас</span>.
             </h1>
 
             <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
-              Используйте в IDE или любом терминале. Одни команды, любое окружение. Интегрируется в любой рабочий процесс. Полный контроль из терминала.
+              Deep tech hedge fund нового поколения. Квантовые стратегии, AI-аналитика и доступ к pre-IPO сделкам в биотехе, квантовых вычислениях и космических технологиях.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <div
+              <a
+                href="#docs"
                 className="group relative cursor-pointer w-full sm:w-auto"
-                onClick={() => copyToClipboard("npm install -g flux-cli", "hero-install")}
               >
                 <div className="absolute inset-0 border border-gray-600 bg-gray-900/20 transition-all duration-300 group-hover:border-white group-hover:shadow-lg group-hover:shadow-white/20"></div>
                 <div className="relative border border-white bg-white text-black font-bold px-6 sm:px-10 py-4 text-base sm:text-lg transition-all duration-300 group-hover:bg-gray-100 group-hover:text-black transform translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 text-center">
                   <div className="flex items-center justify-center gap-2 sm:gap-3">
-                    {copiedStates["hero-install"] ? (
-                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
-                    ) : (
-                      <Copy className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
-                    )}
-                    <span className="text-gray-600 text-sm sm:text-base">$</span>
-                    <span className="text-sm sm:text-base">npm install -g flux-cli</span>
+                    <span className="text-sm sm:text-base">→ Запросить доступ</span>
                   </div>
                 </div>
-              </div>
+              </a>
 
               <Link to="/docs" className="group relative cursor-pointer w-full sm:w-auto">
                 <div className="absolute inset-0 border-2 border-dashed border-gray-600 bg-gray-900/20 transition-all duration-300 group-hover:border-white group-hover:shadow-lg group-hover:shadow-white/20"></div>
                 <div className="relative border-2 border-dashed border-gray-400 bg-transparent text-white font-bold px-10 py-4 text-lg transition-all duration-300 group-hover:border-white group-hover:bg-gray-900/30 transform translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0">
                   <div className="flex items-center gap-3">
                     <span className="text-gray-400">-&gt;</span>
-                    <span>Документация</span>
+                    <span>Для инвесторов</span>
                   </div>
                 </div>
               </Link>
@@ -308,7 +297,7 @@ export default function Index() {
                     <div className="w-3 h-3 bg-yellow-500 hover:bg-yellow-400 transition-colors cursor-pointer"></div>
                     <div className="w-3 h-3 bg-green-500 hover:bg-green-400 transition-colors cursor-pointer"></div>
                   </div>
-                  <span className="text-gray-400 text-sm">flux-terminal</span>
+                  <span className="text-gray-400 text-sm">nexus-terminal</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -329,9 +318,9 @@ export default function Index() {
 
                   {!isExecuting && (
                     <div className="text-white">
-                      <span className="text-green-400">user@dev</span>
+                      <span className="text-green-400">analyst@nexus</span>
                       <span className="text-gray-500">:</span>
-                      <span className="text-blue-400">~/project</span>
+                      <span className="text-blue-400">~/fund</span>
                       <span className="text-white">$ </span>
                       <span className="text-white">{currentTyping}</span>
                       <span className={`text-white ${showCursor ? "opacity-100" : "opacity-0"} transition-opacity`}>
@@ -360,12 +349,12 @@ export default function Index() {
 
                 <div className="mt-6 pt-4 border-t border-gray-800 flex justify-between text-xs text-gray-500">
                   <div className="flex items-center gap-4">
-                    <span className="text-gray-500">Команд выполнено:</span>
+                    <span className="text-gray-500">Стратегий запущено:</span>
                     <span className="text-white">{currentCommand + 1}</span>
                   </div>
                   <div className="flex items-center gap-4">
-                    <span className="text-gray-500">AI-модели:</span>
-                    <span className="text-gray-500">Активны</span>
+                    <span className="text-gray-500">Quant-движок:</span>
+                    <span className="text-gray-500">Активен</span>
                   </div>
                   <div className="flex items-center gap-4">
                     <span className="text-gray-500">Статус:</span>
@@ -382,9 +371,9 @@ export default function Index() {
       <section className="px-6 py-16 lg:px-12 border-t border-gray-800" id="integrations">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Поддержка всех IDE</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Портфельные позиции</h2>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              FLUX CLI работает везде. Одна установка, безграничные возможности.
+              Nexus Capital инвестирует в компании на пересечении науки и коммерции.
             </p>
           </div>
 
@@ -397,38 +386,38 @@ export default function Index() {
                     <div className="w-3 h-3 bg-yellow-500"></div>
                     <div className="w-3 h-3 bg-green-500"></div>
                   </div>
-                  <span className="text-gray-400 text-sm">flux ide --list</span>
+                  <span className="text-gray-400 text-sm">nexus portfolio --sectors</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-gray-500 text-xs">ВСЕ ПОДДЕРЖИВАЮТСЯ</span>
+                  <span className="text-gray-500 text-xs">АКТИВНЫЕ ПОЗИЦИИ</span>
                 </div>
               </div>
 
               <div className="p-6 bg-black">
-                <div className="text-sm text-gray-400 mb-4">$ flux ide --scan</div>
+                <div className="text-sm text-gray-400 mb-4">$ nexus portfolio --list --active</div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 font-mono text-sm mb-6">
                   {[
-                    { name: "cursor", status: "v", desc: "AI-редактор" },
-                    { name: "vscode", status: "v", desc: "Microsoft VS Code" },
-                    { name: "jetbrains", status: "v", desc: "Семейство IntelliJ" },
-                    { name: "android-studio", status: "v", desc: "Android-разработка" },
-                    { name: "vim/neovim", status: "v", desc: "Терминальные редакторы" },
-                    { name: "intellij", status: "v", desc: "Java-разработка" },
-                  ].map((ide) => (
+                    { name: "quantum-compute", status: "↑", desc: "+124% YTD" },
+                    { name: "synthetic-bio", status: "↑", desc: "+89% YTD" },
+                    { name: "space-tech", status: "↑", desc: "+67% YTD" },
+                    { name: "neuro-ai", status: "↑", desc: "+211% YTD" },
+                    { name: "energy-storage", status: "↑", desc: "+45% YTD" },
+                    { name: "defense-tech", status: "↑", desc: "+98% YTD" },
+                  ].map((sector) => (
                     <div
-                      key={ide.name}
+                      key={sector.name}
                       className="flex items-center justify-between py-2 px-3 hover:bg-gray-900 cursor-pointer group transition-all duration-200 border border-transparent hover:border-gray-700"
                     >
                       <div className="flex items-center gap-3">
                         <span className="text-green-400 group-hover:text-white transition-colors w-4">
-                          {ide.status}
+                          {sector.status}
                         </span>
-                        <span className="text-white group-hover:text-gray-200 transition-colors">{ide.name}</span>
+                        <span className="text-white group-hover:text-gray-200 transition-colors">{sector.name}</span>
                       </div>
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 text-xs">
-                        {ide.desc}
+                        {sector.desc}
                       </div>
                     </div>
                   ))}
@@ -438,19 +427,19 @@ export default function Index() {
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div className="text-sm text-gray-400">
                       <div className="font-mono text-xs text-gray-500 space-y-1">
-                        <div>$ flux ide --install-all # Настроить все IDE</div>
-                        <div>$ flux ide --status # Проверить интеграцию</div>
+                        <div>$ nexus portfolio --sharpe # Sharpe ratio: 2.87</div>
+                        <div>$ nexus portfolio --drawdown # Max DD: -8.4%</div>
                       </div>
                     </div>
 
                     <div className="flex items-center gap-4 text-xs text-gray-500">
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span>6 активно</span>
+                        <span>6 секторов</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span>Без настройки</span>
+                        <span>Quant-мониторинг</span>
                       </div>
                     </div>
                   </div>
@@ -461,7 +450,7 @@ export default function Index() {
             <div className="mt-4 text-center">
               <div className="inline-flex items-center gap-2 text-gray-400 text-sm">
                 <span className="text-green-400">*</span>
-                <span>Универсальная совместимость - Мгновенная настройка - Работает везде</span>
+                <span>Только аккредитованные инвесторы - Мин. вход $500K - Закрытый фонд</span>
               </div>
             </div>
           </div>
@@ -472,8 +461,8 @@ export default function Index() {
       <section className="px-6 py-20 lg:px-12 border-t border-gray-800" id="models">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Новейшие AI-модели</h2>
-            <p className="text-xl text-gray-400">Выбирайте AI-модель прямо из терминала</p>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">AI-движок Nexus</h2>
+            <p className="text-xl text-gray-400">Наши квантовые стратегии работают на передовых моделях</p>
           </div>
 
           <div className="max-w-4xl mx-auto">
@@ -485,25 +474,25 @@ export default function Index() {
                     <div className="w-3 h-3 bg-yellow-500"></div>
                     <div className="w-3 h-3 bg-green-500"></div>
                   </div>
-                  <span className="text-gray-400 text-sm">flux model select</span>
+                  <span className="text-gray-400 text-sm">nexus ai --engines</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-gray-500 text-xs">6 ДОСТУПНО</span>
+                  <span className="text-gray-500 text-xs">6 АКТИВНО</span>
                 </div>
               </div>
 
               <div className="p-6 bg-black">
-                <div className="text-sm text-gray-400 mb-4">$ flux model --list</div>
+                <div className="text-sm text-gray-400 mb-4">$ nexus ai --list --running</div>
 
                 <div className="space-y-2 font-mono text-sm">
                   {[
-                    { id: "1", name: "gpt-5", provider: "openai", status: "*", color: "text-green-400" },
-                    { id: "2", name: "claude-4-sonnet", provider: "anthropic", status: "*", color: "text-green-400" },
-                    { id: "3", name: "claude-4.1-opus", provider: "anthropic", status: "*", color: "text-green-400" },
-                    { id: "4", name: "o3", provider: "openai", status: "*", color: "text-green-400" },
-                    { id: "5", name: "gemini-2.5-pro", provider: "google", status: "*", color: "text-green-400" },
-                    { id: "6", name: "grok-4", provider: "xai", status: "*", color: "text-green-400" },
+                    { id: "1", name: "quant-alpha-v4", provider: "proprietary", status: "●", color: "text-green-400" },
+                    { id: "2", name: "signal-detector", provider: "nexus-lab", status: "●", color: "text-green-400" },
+                    { id: "3", name: "risk-engine-pro", provider: "nexus-lab", status: "●", color: "text-green-400" },
+                    { id: "4", name: "macro-forecast", provider: "openai-o3", status: "●", color: "text-green-400" },
+                    { id: "5", name: "sentiment-scan", provider: "nexus-lab", status: "●", color: "text-green-400" },
+                    { id: "6", name: "portfolio-opt", provider: "proprietary", status: "●", color: "text-green-400" },
                   ].map((model) => (
                     <div
                       key={model.id}
@@ -518,7 +507,7 @@ export default function Index() {
                         <span className="text-gray-500 text-xs">({model.provider})</span>
                       </div>
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 text-xs">
-                        Нажмите {model.id} для выбора
+                        Модуль {model.id} активен
                       </div>
                     </div>
                   ))}
@@ -527,26 +516,26 @@ export default function Index() {
                 <div className="mt-6 pt-4 border-t border-gray-800">
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div className="text-sm text-gray-400">
-                      <div className="mb-2">Использование:</div>
+                      <div className="mb-2">Статистика:</div>
                       <div className="font-mono text-xs text-gray-500 space-y-1">
-                        <div>$ flux generate --model gpt-5 "Создать React-компонент"</div>
-                        <div>$ flux model set claude-4-sonnet # По умолчанию</div>
-                        <div>$ flux model status # Проверить модели</div>
+                        <div>$ nexus ai --sharpe        # Sharpe: 2.87</div>
+                        <div>$ nexus ai --alpha         # Alpha: +18.4% ann.</div>
+                        <div>$ nexus ai --accuracy      # Signal acc: 73.2%</div>
                       </div>
                     </div>
 
                     <div className="flex items-center gap-6 text-xs text-gray-500">
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span>4 активно</span>
+                        <span>6 активно</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                        <span>2 ожидают</span>
+                        <span>Real-time</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 bg-gray-500 rounded-full animate-pulse"></div>
-                        <span>Авто-синхронизация</span>
+                        <span>24/7 мониторинг</span>
                       </div>
                     </div>
                   </div>
@@ -557,7 +546,7 @@ export default function Index() {
             <div className="mt-6 text-center">
               <div className="inline-flex items-center gap-2 text-gray-400 text-sm">
                 <span className="text-green-400">*</span>
-                <span>Модели обновляются автоматически - Настройка не требуется</span>
+                <span>Проприетарные алгоритмы - Обновляются ежедневно - 24/7 мониторинг</span>
               </div>
             </div>
           </div>
@@ -568,9 +557,9 @@ export default function Index() {
       <section className="px-6 py-20 lg:px-12 border-t border-gray-800 bg-gray-950/30" id="docs">
         <div className="max-w-5xl mx-auto text-center">
           <div className="mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Готовы ускориться?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Готовы к следующему уровню?</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Пишите мощные скрипты и автоматизации. Автоматически обновляйте документацию, запускайте проверки безопасности или создавайте собственных AI-агентов.
+              Nexus Capital открыт для аккредитованных инвесторов и семейных офисов. Минимальный вход — $500K. Закрытая структура, квартальная ликвидность.
             </p>
           </div>
 
@@ -583,18 +572,18 @@ export default function Index() {
                     <div className="w-12 h-12 mx-auto mb-4 bg-gray-900 border border-gray-600 flex items-center justify-center group-hover:border-white transition-colors group-hover:bg-gray-800">
                       <span className="text-lg font-mono text-white group-hover:text-gray-100">01</span>
                     </div>
-                    <h3 className="text-lg font-bold mb-3 text-white group-hover:text-gray-100">Инициализация</h3>
+                    <h3 className="text-lg font-bold mb-3 text-white group-hover:text-gray-100">Анализ сигналов</h3>
                     <p className="text-gray-400 mb-4 group-hover:text-gray-300 text-sm leading-relaxed">
-                      Создавайте AI-проекты без настройки
+                      AI сканирует рынок и находит alpha раньше других
                     </p>
                   </div>
                   <div
                     className="bg-gray-900 border border-gray-700 p-2.5 font-mono text-xs text-left group-hover:border-gray-500 transition-colors group-hover:bg-gray-800 cursor-pointer flex items-center justify-between"
-                    onClick={() => copyToClipboard("flux init", "init-cmd")}
+                    onClick={() => copyToClipboard("nexus scan --alpha", "init-cmd")}
                   >
                     <div className="flex items-center gap-2">
                       <span className="text-gray-500">$ </span>
-                      <span className="text-white group-hover:text-gray-100">flux init</span>
+                      <span className="text-white group-hover:text-gray-100">nexus scan --alpha</span>
                     </div>
                     {copiedStates["init-cmd"] ? (
                       <Check className="w-3 h-3 text-green-400" />
@@ -614,18 +603,18 @@ export default function Index() {
                     <div className="w-12 h-12 mx-auto mb-4 bg-gray-900 border border-gray-600 flex items-center justify-center group-hover:border-white transition-colors group-hover:bg-gray-800">
                       <span className="text-lg font-mono text-white group-hover:text-gray-100">02</span>
                     </div>
-                    <h3 className="text-lg font-bold mb-3 text-white group-hover:text-gray-100">Генерация</h3>
+                    <h3 className="text-lg font-bold mb-3 text-white group-hover:text-gray-100">Управление риском</h3>
                     <p className="text-gray-400 mb-4 group-hover:text-gray-300 text-sm leading-relaxed">
-                      Создавайте код с новейшими AI-моделями
+                      Monte Carlo, VaR и стресс-тесты в реальном времени
                     </p>
                   </div>
                   <div
                     className="bg-gray-900 border border-gray-700 p-2.5 font-mono text-xs text-left group-hover:border-gray-500 transition-colors group-hover:bg-gray-800 cursor-pointer flex items-center justify-between"
-                    onClick={() => copyToClipboard("flux generate", "generate-cmd")}
+                    onClick={() => copyToClipboard("nexus risk --analyze", "generate-cmd")}
                   >
                     <div className="flex items-center gap-2">
                       <span className="text-gray-500">$ </span>
-                      <span className="text-white group-hover:text-gray-100">flux generate</span>
+                      <span className="text-white group-hover:text-gray-100">nexus risk --analyze</span>
                     </div>
                     {copiedStates["generate-cmd"] ? (
                       <Check className="w-3 h-3 text-green-400" />
@@ -645,18 +634,18 @@ export default function Index() {
                     <div className="w-12 h-12 mx-auto mb-4 bg-gray-900 border border-gray-600 flex items-center justify-center group-hover:border-white transition-colors group-hover:bg-gray-800">
                       <span className="text-lg font-mono text-white group-hover:text-gray-100">03</span>
                     </div>
-                    <h3 className="text-lg font-bold mb-3 text-white group-hover:text-gray-100">Деплой</h3>
+                    <h3 className="text-lg font-bold mb-3 text-white group-hover:text-gray-100">Отчёт LP</h3>
                     <p className="text-gray-400 mb-4 group-hover:text-gray-300 text-sm leading-relaxed">
-                      Выкатывайте в production с авто-оптимизацией
+                      Автоматические квартальные отчёты для инвесторов
                     </p>
                   </div>
                   <div
                     className="bg-gray-900 border border-gray-700 p-2.5 font-mono text-xs text-left group-hover:border-gray-500 transition-colors group-hover:bg-gray-800 cursor-pointer flex items-center justify-between"
-                    onClick={() => copyToClipboard("flux deploy", "deploy-cmd")}
+                    onClick={() => copyToClipboard("nexus report --generate", "deploy-cmd")}
                   >
                     <div className="flex items-center gap-2">
                       <span className="text-gray-500">$ </span>
-                      <span className="text-white group-hover:text-gray-100">flux deploy</span>
+                      <span className="text-white group-hover:text-gray-100">nexus report --generate</span>
                     </div>
                     {copiedStates["deploy-cmd"] ? (
                       <Check className="w-3 h-3 text-green-400" />
@@ -670,26 +659,19 @@ export default function Index() {
           </div>
 
           <div className="space-y-6">
-            <Link to="/docs" className="group relative cursor-pointer inline-block w-full sm:w-auto">
+            <a href="mailto:invest@nexuscapital.io" className="group relative cursor-pointer inline-block w-full sm:w-auto">
               <div className="absolute inset-0 border-2 border-gray-600 bg-gray-900/20 transition-all duration-300 group-hover:border-white group-hover:shadow-lg group-hover:shadow-white/20"></div>
               <div className="relative border-2 border-white bg-white text-black font-bold px-8 sm:px-16 py-4 sm:py-5 text-lg sm:text-xl transition-all duration-300 group-hover:bg-gray-100 group-hover:text-black transform translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 text-center">
                 <div className="flex items-center justify-center gap-2 sm:gap-3">
                   <span className="text-gray-600 text-base sm:text-lg">&gt;</span>
-                  <span className="text-base sm:text-lg">Начать сейчас</span>
+                  <span className="text-base sm:text-lg">Запросить доступ</span>
                 </div>
               </div>
-            </Link>
+            </a>
 
-            <div
-              className="text-gray-400 text-base sm:text-lg font-mono hover:text-white transition-colors cursor-pointer flex items-center justify-center gap-2 sm:gap-3 px-4 py-2 hover:bg-gray-900/30 rounded-none border border-transparent hover:border-gray-700"
-              onClick={() => copyToClipboard("npm install -g flux-cli", "bottom-install")}
-            >
-              {copiedStates["bottom-install"] ? (
-                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
-              ) : (
-                <Copy className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 hover:text-white transition-colors flex-shrink-0" />
-              )}
-              <span className="break-all sm:break-normal">$ npm install -g flux-cli</span>
+            <div className="text-gray-400 text-base sm:text-lg font-mono flex items-center justify-center gap-2 sm:gap-3 px-4 py-2">
+              <span className="text-green-400">●</span>
+              <span className="break-all sm:break-normal">Фонд открыт для новых LP · Q2 2025</span>
             </div>
           </div>
         </div>
@@ -699,8 +681,8 @@ export default function Index() {
       <footer className="border-t border-gray-800 px-6 py-12 lg:px-12 bg-gray-950">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="text-gray-600 text-lg mb-4">Создано разработчиками для разработчиков.</div>
-            <div className="text-gray-700 text-sm">FLUX CLI. Деплой быстрее. Код лучше.</div>
+            <div className="text-gray-600 text-lg mb-4">Deep tech investments for the next century.</div>
+            <div className="text-gray-700 text-sm">Nexus Capital. Только аккредитованные инвесторы. Не является публичной офертой.</div>
           </div>
         </div>
       </footer>

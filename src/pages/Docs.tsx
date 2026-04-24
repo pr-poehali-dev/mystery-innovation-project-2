@@ -21,54 +21,54 @@ export default function DocsPage() {
 
   const sidebarSections = [
     {
-      title: "Начало работы",
+      title: "О фонде",
       id: "getting-started",
       icon: Rocket,
       items: [
-        { title: "Установка", id: "installation" },
-        { title: "Быстрый старт", id: "quick-start" },
-        { title: "Конфигурация", id: "configuration" },
+        { title: "Обзор стратегии", id: "installation" },
+        { title: "Команда", id: "quick-start" },
+        { title: "Структура фонда", id: "configuration" },
       ],
     },
     {
-      title: "Команды",
+      title: "Инвестиции",
       id: "commands",
       icon: Terminal,
       items: [
-        { title: "flux init", id: "init" },
-        { title: "flux generate", id: "generate" },
-        { title: "flux review", id: "review" },
-        { title: "flux deploy", id: "deploy" },
+        { title: "Условия входа", id: "init" },
+        { title: "Портфель", id: "generate" },
+        { title: "Секторы", id: "review" },
+        { title: "Доходность", id: "deploy" },
       ],
     },
     {
-      title: "AI-модели",
+      title: "AI-движок",
       id: "models",
       icon: Zap,
       items: [
-        { title: "Выбор модели", id: "model-selection" },
-        { title: "Свои модели", id: "custom-models" },
-        { title: "Настройка моделей", id: "model-config" },
+        { title: "Quant-стратегии", id: "model-selection" },
+        { title: "Управление риском", id: "custom-models" },
+        { title: "Сигнальная система", id: "model-config" },
       ],
     },
     {
-      title: "Интеграции",
+      title: "Для LP",
       id: "integrations",
       icon: Settings,
       items: [
-        { title: "Настройка IDE", id: "ide-setup" },
-        { title: "CI/CD интеграция", id: "cicd" },
-        { title: "Свои агенты", id: "custom-agents" },
+        { title: "Отчётность", id: "ide-setup" },
+        { title: "Ликвидность", id: "cicd" },
+        { title: "Юридическое", id: "custom-agents" },
       ],
     },
     {
-      title: "Справочник API",
+      title: "Контакты",
       id: "api",
       icon: Code,
       items: [
-        { title: "CLI API", id: "cli-api" },
-        { title: "Configuration API", id: "config-api" },
-        { title: "Plugin API", id: "plugin-api" },
+        { title: "IR-контакт", id: "cli-api" },
+        { title: "Офисы", id: "config-api" },
+        { title: "Комплаенс", id: "plugin-api" },
       ],
     },
   ]
@@ -79,9 +79,9 @@ export default function DocsPage() {
         return (
           <div className="space-y-8">
             <div>
-              <h1 className="text-4xl font-bold mb-4 text-white">Начало работы с FLUX CLI</h1>
+              <h1 className="text-4xl font-bold mb-4 text-white">Nexus Capital — Deep Tech Hedge Fund</h1>
               <p className="text-xl text-gray-400 mb-8">
-                FLUX CLI - это AI-инструмент для разработки, который помогает деплоить быстрее прямо из терминала.
+                Мы инвестируем в компании на передовой науки: квантовые вычисления, синтетическая биология, нейроинтерфейсы и космические технологии.
               </p>
             </div>
 
@@ -90,22 +90,17 @@ export default function DocsPage() {
                 <div className="w-8 h-8 bg-gray-900 border border-gray-600 flex items-center justify-center">
                   <span className="text-sm font-mono text-white">01</span>
                 </div>
-                Установка
+                Стратегия
               </h2>
-              <p className="text-gray-400 mb-4">Установите FLUX CLI глобально через npm:</p>
-              <div
-                className="bg-black border border-gray-700 p-4 font-mono text-sm cursor-pointer hover:border-gray-500 transition-colors flex items-center justify-between"
-                onClick={() => copyToClipboard("npm install -g flux", "install-cmd")}
-              >
-                <div className="flex items-center gap-2">
-                  <span className="text-gray-500">$</span>
-                  <span className="text-white">npm install -g flux</span>
+              <p className="text-gray-400 mb-4">Nexus Capital использует proprietary quant-движок для поиска alpha в deep tech секторах:</p>
+              <div className="bg-black border border-gray-700 p-4 font-mono text-sm">
+                <div className="space-y-2 text-gray-300">
+                  <div><span className="text-green-400">●</span> Квантовые вычисления — 28% портфеля</div>
+                  <div><span className="text-green-400">●</span> Синтетическая биология — 22% портфеля</div>
+                  <div><span className="text-green-400">●</span> Нейро-AI — 20% портфеля</div>
+                  <div><span className="text-green-400">●</span> Space Tech — 18% портфеля</div>
+                  <div><span className="text-green-400">●</span> Defense Tech — 12% портфеля</div>
                 </div>
-                {copiedStates["install-cmd"] ? (
-                  <Check className="w-4 h-4 text-green-400" />
-                ) : (
-                  <Copy className="w-4 h-4 text-gray-400 hover:text-white transition-colors" />
-                )}
               </div>
             </div>
 
@@ -114,53 +109,37 @@ export default function DocsPage() {
                 <div className="w-8 h-8 bg-gray-900 border border-gray-600 flex items-center justify-center">
                   <span className="text-sm font-mono text-white">02</span>
                 </div>
-                Быстрый старт
+                Ключевые показатели
               </h2>
-              <p className="text-gray-400 mb-4">Создайте свой первый AI-проект:</p>
+              <p className="text-gray-400 mb-4">Результаты с момента основания фонда:</p>
               <div className="space-y-3">
-                <div
-                  className="bg-black border border-gray-700 p-4 font-mono text-sm cursor-pointer hover:border-gray-500 transition-colors flex items-center justify-between"
-                  onClick={() => copyToClipboard("flux init my-project", "init-cmd")}
-                >
+                <div className="bg-black border border-gray-700 p-4 font-mono text-sm flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="text-gray-500">$</span>
-                    <span className="text-white">flux init my-project</span>
+                    <span className="text-gray-500">→</span>
+                    <span className="text-white">Доходность с основания</span>
                   </div>
-                  {copiedStates["init-cmd"] ? (
-                    <Check className="w-4 h-4 text-green-400" />
-                  ) : (
-                    <Copy className="w-4 h-4 text-gray-400 hover:text-white transition-colors" />
-                  )}
+                  <span className="text-green-400 font-bold">+312% (3 года)</span>
                 </div>
-                <div
-                  className="bg-black border border-gray-700 p-4 font-mono text-sm cursor-pointer hover:border-gray-500 transition-colors flex items-center justify-between"
-                  onClick={() => copyToClipboard("cd my-project", "cd-cmd")}
-                >
+                <div className="bg-black border border-gray-700 p-4 font-mono text-sm flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="text-gray-500">$</span>
-                    <span className="text-white">cd my-project</span>
+                    <span className="text-gray-500">→</span>
+                    <span className="text-white">Sharpe Ratio</span>
                   </div>
-                  {copiedStates["cd-cmd"] ? (
-                    <Check className="w-4 h-4 text-green-400" />
-                  ) : (
-                    <Copy className="w-4 h-4 text-gray-400 hover:text-white transition-colors" />
-                  )}
+                  <span className="text-green-400 font-bold">2.87</span>
                 </div>
-                <div
-                  className="bg-black border border-gray-700 p-4 font-mono text-sm cursor-pointer hover:border-gray-500 transition-colors flex items-center justify-between"
-                  onClick={() =>
-                    copyToClipboard("flux generate --model gpt-5 'Create a React component'", "generate-cmd")
-                  }
-                >
+                <div className="bg-black border border-gray-700 p-4 font-mono text-sm flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="text-gray-500">$</span>
-                    <span className="text-white">flux generate --model gpt-5 "Создать React-компонент"</span>
+                    <span className="text-gray-500">→</span>
+                    <span className="text-white">Max Drawdown</span>
                   </div>
-                  {copiedStates["generate-cmd"] ? (
-                    <Check className="w-4 h-4 text-green-400" />
-                  ) : (
-                    <Copy className="w-4 h-4 text-gray-400 hover:text-white transition-colors" />
-                  )}
+                  <span className="text-yellow-400 font-bold">-8.4%</span>
+                </div>
+                <div className="bg-black border border-gray-700 p-4 font-mono text-sm flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="text-gray-500">→</span>
+                    <span className="text-white">AUM</span>
+                  </div>
+                  <span className="text-green-400 font-bold">$240M+</span>
                 </div>
               </div>
             </div>
@@ -170,22 +149,22 @@ export default function DocsPage() {
                 <div className="w-8 h-8 bg-gray-900 border border-gray-600 flex items-center justify-center">
                   <span className="text-sm font-mono text-white">03</span>
                 </div>
-                Что дальше?
+                Как стать LP?
               </h2>
               <div className="grid md:grid-cols-2 gap-4">
                 <div
                   className="border border-gray-700 p-4 hover:border-gray-500 transition-colors cursor-pointer"
-                  onClick={() => setActiveSection("configuration")}
+                  onClick={() => setActiveSection("init")}
                 >
-                  <h3 className="text-white font-bold mb-2">Настроить AI-модели</h3>
-                  <p className="text-gray-400 text-sm">Выберите предпочитаемые модели и настройте параметры</p>
+                  <h3 className="text-white font-bold mb-2">Условия входа</h3>
+                  <p className="text-gray-400 text-sm">Минимальный вход от $500K. Только аккредитованные инвесторы</p>
                 </div>
                 <div
                   className="border border-gray-700 p-4 hover:border-gray-500 transition-colors cursor-pointer"
                   onClick={() => setActiveSection("ide-setup")}
                 >
-                  <h3 className="text-white font-bold mb-2">Интеграция с IDE</h3>
-                  <p className="text-gray-400 text-sm">Подключите FLUX CLI к вашей среде разработки</p>
+                  <h3 className="text-white font-bold mb-2">Отчётность и ликвидность</h3>
+                  <p className="text-gray-400 text-sm">Квартальные отчёты LP и квартальные окна ликвидности</p>
                 </div>
               </div>
             </div>
@@ -196,46 +175,32 @@ export default function DocsPage() {
         return (
           <div className="space-y-8">
             <div>
-              <h1 className="text-4xl font-bold mb-4 text-white">Установка</h1>
-              <p className="text-xl text-gray-400 mb-8">Несколько способов установить FLUX CLI на вашу систему.</p>
+              <h1 className="text-4xl font-bold mb-4 text-white">Обзор стратегии</h1>
+              <p className="text-xl text-gray-400 mb-8">Nexus Capital строит концентрированный портфель из 15–25 позиций в deep tech.</p>
             </div>
 
             <div className="grid gap-6">
               <div className="bg-gray-950 border border-gray-800 p-6">
-                <h3 className="text-xl font-bold mb-3 text-white">NPM (рекомендуется)</h3>
-                <p className="text-gray-400 mb-4">Установите глобально для доступа из любой директории:</p>
-                <div
-                  className="bg-black border border-gray-700 p-4 font-mono text-sm cursor-pointer hover:border-gray-500 transition-colors flex items-center justify-between"
-                  onClick={() => copyToClipboard("npm install -g flux", "npm-install")}
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="text-gray-500">$</span>
-                    <span className="text-white">npm install -g flux</span>
+                <h3 className="text-xl font-bold mb-3 text-white">Long/Short Equity</h3>
+                <p className="text-gray-400 mb-4">Основная стратегия — long/short в публичных deep tech компаниях с AI-отбором позиций:</p>
+                <div className="bg-black border border-gray-700 p-4 font-mono text-sm">
+                  <div className="space-y-1 text-gray-300">
+                    <div><span className="text-green-400">long</span>  — высокая вероятность технологического прорыва</div>
+                    <div><span className="text-red-400">short</span> — переоценённые legacy-компании</div>
+                    <div><span className="text-yellow-400">hedge</span> — опционные структуры для защиты</div>
                   </div>
-                  {copiedStates["npm-install"] ? (
-                    <Check className="w-4 h-4 text-green-400" />
-                  ) : (
-                    <Copy className="w-4 h-4 text-gray-400 hover:text-white transition-colors" />
-                  )}
                 </div>
               </div>
 
               <div className="bg-gray-950 border border-gray-800 p-6">
-                <h3 className="text-xl font-bold mb-3 text-white">Yarn</h3>
-                <p className="text-gray-400 mb-4">Альтернативная установка через Yarn:</p>
-                <div
-                  className="bg-black border border-gray-700 p-4 font-mono text-sm cursor-pointer hover:border-gray-500 transition-colors flex items-center justify-between"
-                  onClick={() => copyToClipboard("yarn global add flux", "yarn-install")}
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="text-gray-500">$</span>
-                    <span className="text-white">yarn global add flux</span>
+                <h3 className="text-xl font-bold mb-3 text-white">Venture sleeve</h3>
+                <p className="text-gray-400 mb-4">До 20% портфеля — pre-IPO и Series B/C в deep tech стартапах:</p>
+                <div className="bg-black border border-gray-700 p-4 font-mono text-sm">
+                  <div className="space-y-1 text-gray-300">
+                    <div><span className="text-green-400">●</span> Квантовые вычисления (Series B+)</div>
+                    <div><span className="text-green-400">●</span> Синтетическая биология (pre-IPO)</div>
+                    <div><span className="text-green-400">●</span> Нейроинтерфейсы (Series C)</div>
                   </div>
-                  {copiedStates["yarn-install"] ? (
-                    <Check className="w-4 h-4 text-green-400" />
-                  ) : (
-                    <Copy className="w-4 h-4 text-gray-400 hover:text-white transition-colors" />
-                  )}
                 </div>
               </div>
 
@@ -579,59 +544,37 @@ export default function DocsPage() {
         return (
           <div className="space-y-8">
             <div>
-              <h1 className="text-4xl font-bold mb-4 text-white">Настройка IDE</h1>
-              <p className="text-xl text-gray-400 mb-8">Интегрируйте FLUX CLI с вашей средой разработки.</p>
+              <h1 className="text-4xl font-bold mb-4 text-white">Отчётность для LP</h1>
+              <p className="text-xl text-gray-400 mb-8">Nexus Capital предоставляет полную прозрачность для инвесторов.</p>
             </div>
 
             <div className="grid gap-6">
               <div className="bg-gray-950 border border-gray-800 p-6">
-                <h3 className="text-xl font-bold mb-3 text-white">Интеграция с VS Code</h3>
-                <p className="text-gray-400 mb-4">Установите расширение FLUX CLI для VS Code:</p>
+                <h3 className="text-xl font-bold mb-3 text-white">Квартальные отчёты</h3>
+                <p className="text-gray-400 mb-4">Каждый квартал LP получают:</p>
                 <div className="space-y-3">
-                  <div
-                    className="bg-black border border-gray-700 p-4 font-mono text-sm cursor-pointer hover:border-gray-500 transition-colors flex items-center justify-between"
-                    onClick={() =>
-                      copyToClipboard("code --install-extension flux.vscode-extension", "vscode-install")
-                    }
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className="text-gray-500">$</span>
-                      <span className="text-white">code --install-extension flux.vscode-extension</span>
+                  <div className="bg-black border border-gray-700 p-4 font-mono text-sm">
+                    <div className="space-y-1 text-gray-300">
+                      <div><span className="text-green-400">✓</span> Детальный P&L по позициям</div>
+                      <div><span className="text-green-400">✓</span> Attribution analysis</div>
+                      <div><span className="text-green-400">✓</span> Risk metrics (VaR, Sharpe, Sortino)</div>
+                      <div><span className="text-green-400">✓</span> Обзор рынка и позиционирование</div>
+                      <div><span className="text-green-400">✓</span> Capital account statement</div>
                     </div>
-                    {copiedStates["vscode-install"] ? (
-                      <Check className="w-4 h-4 text-green-400" />
-                    ) : (
-                      <Copy className="w-4 h-4 text-gray-400 hover:text-white transition-colors" />
-                    )}
-                  </div>
-                  <div className="text-sm text-gray-400">
-                    <p>Возможности:</p>
-                    <ul className="list-disc list-inside mt-2 space-y-1">
-                      <li>Генерация кода прямо в редакторе</li>
-                      <li>AI-автодополнение</li>
-                      <li>Встроенные терминальные команды</li>
-                      <li>Код-ревью в реальном времени</li>
-                    </ul>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gray-950 border border-gray-800 p-6">
-                <h3 className="text-xl font-bold mb-3 text-white">JetBrains IDE</h3>
-                <p className="text-gray-400 mb-4">Совместимо с IntelliJ IDEA, WebStorm, PyCharm и другими:</p>
-                <div
-                  className="bg-black border border-gray-700 p-4 font-mono text-sm cursor-pointer hover:border-gray-500 transition-colors flex items-center justify-between"
-                  onClick={() => copyToClipboard("flux ide setup jetbrains", "jetbrains-setup")}
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="text-gray-500">$</span>
-                    <span className="text-white">flux ide setup jetbrains</span>
+                <h3 className="text-xl font-bold mb-3 text-white">LP Portal</h3>
+                <p className="text-gray-400 mb-4">Онлайн-портал с доступом в реальном времени:</p>
+                <div className="bg-black border border-gray-700 p-4 font-mono text-sm">
+                  <div className="space-y-1 text-gray-300">
+                    <div><span className="text-green-400">●</span> NAV в режиме реального времени</div>
+                    <div><span className="text-green-400">●</span> История доходности</div>
+                    <div><span className="text-green-400">●</span> Документы фонда (K-1, аудит)</div>
+                    <div><span className="text-green-400">●</span> Коммуникации с GP</div>
                   </div>
-                  {copiedStates["jetbrains-setup"] ? (
-                    <Check className="w-4 h-4 text-green-400" />
-                  ) : (
-                    <Copy className="w-4 h-4 text-gray-400 hover:text-white transition-colors" />
-                  )}
                 </div>
               </div>
 
@@ -731,11 +674,11 @@ export default function DocsPage() {
                 <div className="w-3 h-3 bg-green-500"></div>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-white font-bold text-lg">FLUX</span>
-                <span className="text-gray-400 text-sm">CLI</span>
+                <span className="text-white font-bold text-lg">NEXUS</span>
+                <span className="text-gray-400 text-sm">CAPITAL</span>
               </div>
             </Link>
-            <div className="text-gray-500 text-sm">/ Документация</div>
+            <div className="text-gray-500 text-sm">/ Для инвесторов</div>
           </div>
 
           <button
@@ -756,7 +699,7 @@ export default function DocsPage() {
           <div className="p-6">
             <div className="flex items-center gap-3 mb-8">
               <Book className="w-6 h-6 text-white" />
-              <h2 className="text-xl font-bold text-white">Документация</h2>
+              <h2 className="text-xl font-bold text-white">Investor Relations</h2>
             </div>
 
             <nav className="space-y-6">
